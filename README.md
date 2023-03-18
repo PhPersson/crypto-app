@@ -1,5 +1,5 @@
 # Bitcoin Chart
-En Vue.js-applikation som hämtar historiska priser för Bitcoin :dollar: :credit_card: från Coingecko API och visar dem på en linjediagram med hjälp av Chart.js.
+En Vue.js-applikation som hämtar historiska priser för Bitcoin :dollar: :credit_card: från Coingecko API och visar dem på ett linjediagram med hjälp av Chart.js.
 
 ## Installation
 Klona detta repository.
@@ -31,3 +31,9 @@ Nedan finns ett live demo av applikationen
 
 ## Licens
 Det här projektet är licensierat under Apache License 2.0. Se  [LICENSE](LICENSE) för mer information.
+
+## Förbättringar
+
+- [ ] Låta användaren söka efter en specefik kryptovaluta
+- [ ] Låta användaren ändra färgen på grafen
+
