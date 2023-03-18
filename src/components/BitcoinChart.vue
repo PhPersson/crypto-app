@@ -52,7 +52,6 @@ export default {
         if (this.chart) {
           this.chart.destroy();
         }
-
         this.chart = new Chart(ctx, {
         type: 'line',
         data: {
