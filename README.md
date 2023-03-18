@@ -19,15 +19,14 @@ Välj tidsperioden från drop-down menyn.
 Diagrammet uppdateras för att visa historiska priser för Bitcoin för den valda tidsperioden.
 
 ## Teknologier som används
-* [Vue.js](https://vuejs.org/)a
+* [Vue.js](https://vuejs.org/)
 * [axios](https://github.com/axios/axios)
 * [Chart.js](https://www.chartjs.org/)
 * [Coingecko API](https://www.coingecko.com/en/api/documentation)
 
 
 # Demo
-Nedan finns ett live demo av applikationen
-[Bitcoin Chart](https://exquisite-bavarois-73d29d.netlify.app/)
+Du hittar en live demo av applikationen på [Bitcoin Chart](https://exquisite-bavarois-73d29d.netlify.app/)
 
 ## Licens
 Det här projektet är licensierat under Apache License 2.0. Se  [LICENSE](LICENSE) för mer information.
