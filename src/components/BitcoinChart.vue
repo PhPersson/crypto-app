@@ -41,6 +41,7 @@ export default {
         axios.get(url)
           .then(response => {
             this.prices = response.data.prices
+            this.renderChart();
           })
           .catch(error => {
             console.error(error);
@@ -52,6 +53,7 @@ export default {
         if (this.chart) {
           this.chart.destroy();
         }
+
         this.chart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -60,10 +62,10 @@ export default {
             {
               label: 'Bitcoin',
               backgroundColor: '#f87979',
-              data: this.prices
+              data: this.prices,
             }
           ]
-        }
+        },
       });
       }
     },
@@ -72,4 +74,8 @@ export default {
 
 <style>
 
+  .chart-container {
+    width: 800px;
+    height: 400px;
+  }
 </style>
