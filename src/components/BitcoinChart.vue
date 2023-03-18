@@ -1,4 +1,7 @@
 <template>
+    <div>
+    <LvColorpicker v-model="color" hidePalette @change="renderChart"/>
+    </div>
     <div class="bitcoin-chart">
       <form>
         <label>
@@ -18,8 +21,13 @@
 import axios from 'axios';
 import Chart from 'chart.js/auto';
 import 'chartjs-adapter-moment';
-  
+import LvColorpicker from 'lightvue/color-picker';
+
+
 export default {
+      components: {
+        LvColorpicker
+    },
     name: 'BitcoinChart',
     data() {
       return {
@@ -27,6 +35,7 @@ export default {
         prices: [],
         labels: [],
         days: "7",
+        color: ''
       }
     },
     // mounted används för att göra något när applikationen har laddats klart
@@ -63,7 +72,7 @@ export default {
           datasets: [
             {
               label: 'Bitcoin',
-              backgroundColor: '#f87979',
+              backgroundColor: this.color,
               data: this.prices,
               fill: true,
               pointBackgroundColor: 'grey',
