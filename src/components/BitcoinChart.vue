@@ -16,9 +16,10 @@
   
 <script>
 import axios from 'axios';
-
+import Chart from 'chart.js/auto';
+import 'chartjs-adapter-moment';
   
-  export default {
+export default {
     name: 'BitcoinChart',
     data() {
       return {
@@ -28,26 +29,58 @@ import axios from 'axios';
         days: "7",
       }
     },
+    // mounted används för att göra något när applikationen har laddats klart
+    // här så hämtas data från api:et och sedan genereras en tabell
     mounted() {
       this.fetchData();
     },
+
     methods: {
       fetchData() {
         const url = `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=sek&days=${this.days}`;
   
         axios.get(url)
           .then(response => {
-            console.log(response.data.prices);
-            this.prices = response.data.prices;
-            this.labels = response.data.prices.map(price => new Date(price[0]).toLocaleDateString("sv-SE"));
-            console.log(response);
-            console.log(this.labels);
+            this.prices = response.data.prices
+            this.labels = response.data.prices.map(price => new Date(price[0]).toLocaleDateString());
+            this.renderChart();
           })
           .catch(error => {
             console.error(error);
+            alert.error("Ojdå. Följande fel uppstod:" + error);
           });
-      }
+      },
+      renderChart() {
+        const ctx = this.$refs.chart.getContext('2d');
+        if (this.chart) {
+          this.chart.destroy();
+        }
 
-  }
+        this.chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: this.labels,
+          datasets: [
+            {
+              label: 'Bitcoin',
+              backgroundColor: '#f87979',
+              data: this.prices,
+              fill: true,
+              pointBackgroundColor: 'grey',
+              pointRadius: 1.5,
+            }
+          ]
+        },
+      });
+      }
+    },
 }
-  </script>
+</script>
+
+<style>
+
+  .chart-container {
+    width: 800px;
+    height: 400px;
+  }
+</style>
