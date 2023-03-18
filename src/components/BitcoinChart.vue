@@ -25,6 +25,7 @@ export default {
       return {
         chart: null,
         prices: [],
+        labels: [],
         days: "7",
       }
     },
@@ -41,6 +42,7 @@ export default {
         axios.get(url)
           .then(response => {
             this.prices = response.data.prices
+            this.labels = response.data.prices.map(price => new Date(price[0]).toLocaleDateString());
             this.renderChart();
           })
           .catch(error => {
@@ -63,6 +65,9 @@ export default {
               label: 'Bitcoin',
               backgroundColor: '#f87979',
               data: this.prices,
+              fill: true,
+              pointBackgroundColor: 'grey',
+              pointRadius: 1.5,
             }
           ]
         },
