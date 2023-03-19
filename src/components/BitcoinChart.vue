@@ -1,4 +1,5 @@
 <template>
+  <div class="main-container">
     <div class="color-picker">
       <form>
         <label>
@@ -10,6 +11,17 @@
         </label>
       </form>
     </div>
+
+    <div class="crypto-picker">
+      <form>
+        <label>
+          Välj kryptovaluta:
+          <input type="radio" name="currency" value="ethereum" v-model="currency" @change="fetchData"> Ethereum
+          <input type="radio" name="currency" value="bitcoin" v-model="currency" @change="fetchData"> Bitcoin
+        </label>
+      </form>
+    </div>
+
     <div class="bitcoin-chart">
       <form>
         <label>
@@ -23,6 +35,7 @@
       </form>
       <canvas id="bitcoin-chart" width="800" height="400" ref="chart"></canvas>
     </div>
+  </div>
 </template>
   
 <script>
@@ -40,6 +53,7 @@ export default {
         labels: [],
         days: "7",
         chartColor: "",
+        currency: "bitcoin",
       }
     },
     // mounted används för att göra något när applikationen har laddats klart
@@ -50,7 +64,7 @@ export default {
 
     methods: {
       fetchData() {
-        const url = `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=sek&days=${this.days}`;
+        const url = `https://api.coingecko.com/api/v3/coins/${this.currency}/market_chart?vs_currency=sek&days=${this.days}`;
   
         axios.get(url)
           .then(response => {
@@ -63,7 +77,17 @@ export default {
             alert.error("Ojdå. Följande fel uppstod:" + error);
           });
       },
-      renderChart() {
+
+    filters: {
+        capitalize(value) {
+          if (!value) return '';
+          value = value.toString();
+          return value.charAt(0).toUpperCase() + value.slice(1);
+        }
+    },
+
+
+    renderChart() {
         const ctx = this.$refs.chart.getContext('2d');
         if (this.chart) {
           this.chart.destroy();
@@ -75,7 +99,8 @@ export default {
           labels: this.labels,
           datasets: [
             {
-              label: 'Bitcoin',
+              label: 
+              this.currency,
               backgroundColor: this.chartColor,
               data: this.prices,
               fill: true,
@@ -94,9 +119,24 @@ export default {
 </script>
 
 <style>
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .chart-container {
-    width: 800px;
-    height: 400px;
-  }
+.color-picker {
+  margin-bottom: 20px;
+}
+
+.crypto-picker {
+  width: 300px;
+  margin-left: 20px;
+  
+}
+
+.bitcoin-chart {
+  margin-bottom: 30px;
+}
 </style>
