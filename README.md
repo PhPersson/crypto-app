@@ -26,7 +26,7 @@ Diagrammet uppdateras för att visa historiska priser för Bitcoin för den vald
 
 
 # Demo
-Du hittar en live demo av applikationen på [Bitcoin Chart](https://exquisite-bavarois-73d29d.netlify.app/)
+Du hittar en live demo av applikationen på [Crypto Chart](https://exquisite-bavarois-73d29d.netlify.app/)
 
 ## Licens
 Det här projektet är licensierat under Apache License 2.0. Se  [LICENSE](LICENSE) för mer information.
