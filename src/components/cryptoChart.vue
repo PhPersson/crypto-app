@@ -22,7 +22,7 @@
       </form>
     </div>
 
-    <div class="bitcoin-chart">
+    <div class="crypto-chart">
       <form>
         <label>
           Välj tidsperiod:
@@ -33,7 +33,7 @@
           </select>
         </label>
       </form>
-      <canvas id="bitcoin-chart" width="800" height="400" ref="chart"></canvas>
+      <canvas id="crypto-chart" width="800" height="400" ref="chart"></canvas>
     </div>
   </div>
 </template>
