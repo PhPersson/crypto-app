@@ -1,16 +1,16 @@
 <template>
   <div class="app">
-    <bitcoin-chart />
+    <cryptoChart />
   </div>
 </template>
 
 <script>
-import BitcoinChart from './components/BitcoinChart.vue';
+import cryptoChart from './components/cryptoChart.vue';
 
 export default {
   name: 'App',
   components: {
-    BitcoinChart
+    cryptoChart
   }
 }
 </script>

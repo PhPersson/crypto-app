@@ -45,7 +45,7 @@ import 'chartjs-adapter-moment';
 
 
 export default {
-    name: 'BitcoinChart',
+    name: 'cryptoChart',
     data() {
       return {
         chart: null,
@@ -118,25 +118,4 @@ export default {
 }
 </script>
 
-<style>
-.main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.color-picker {
-  margin-bottom: 20px;
-}
-
-.crypto-picker {
-  width: 300px;
-  margin-left: 20px;
-  
-}
-
-.bitcoin-chart {
-  margin-bottom: 30px;
-}
-</style>
+<style src="..\css\cryptoChart.css"> </style>
