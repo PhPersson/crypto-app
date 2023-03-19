@@ -34,5 +34,5 @@ Det här projektet är licensierat under Apache License 2.0. Se  [LICENSE](LICEN
 ## Förbättringar
 
 - [ ] Låta användaren söka efter en specefik kryptovaluta
-- [ ] Låta användaren ändra färgen på grafen
+- [X] Låta användaren ändra färgen på grafen
 
