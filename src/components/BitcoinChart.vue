@@ -3,9 +3,10 @@
       <form>
         <label>
           Välj färg:
-          <input type="radio" name="color" value="#ff0000" v-model="chartColor" @change="updateChartColor"> Röd
-          <input type="radio" name="color" value="#00ff00" v-model="chartColor" @change="updateChartColor"> Grön
-          <input type="radio" name="color" value="#0000ff" v-model="chartColor" @change="updateChartColor"> Blå
+          <input type="radio" name="color" value="#ff6384" v-model="chartColor" @change="updateChartColor"> Röd
+          <input type="radio" name="color" value="#4bc0c0" v-model="chartColor" @change="updateChartColor"> Grön
+          <input type="radio" name="color" value="#36a2eb" v-model="chartColor" @change="updateChartColor"> Blå
+          <input type="radio" name="color" value="#ff9f40" v-model="chartColor" @change="updateChartColor"> Orange
         </label>
       </form>
     </div>
