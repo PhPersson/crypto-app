@@ -8,6 +8,13 @@
   .color-picker {
     margin-bottom: 20px;
   }
+
+  .color-box {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.1em;
+  }
   
   .crypto-picker {
     width: 300px;

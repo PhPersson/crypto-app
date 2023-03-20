@@ -5,9 +5,13 @@
         <label>
           Välj färg:
           <input type="radio" name="color" value="#ff6384" v-model="chartColor" @change="updateChartColor"> Röd
+          <span class="color-box" style="background-color: #ff6384;"></span>
           <input type="radio" name="color" value="#4bc0c0" v-model="chartColor" @change="updateChartColor"> Grön
+          <span class="color-box" style="background-color: #4bc0c0;"></span>
           <input type="radio" name="color" value="#36a2eb" v-model="chartColor" @change="updateChartColor"> Blå
-          <input type="radio" name="color" value="#ff9f40" v-model="chartColor" @change="updateChartColor"> Orange
+          <span class="color-box" style="background-color: #36a2eb;"></span>
+          <input type=radio name=color value=#ff9f40 v-model=chartColor @change=updateChartColor> Orange
+          <span class="color-box" style="background-color: #ff9f40;"></span>
         </label>
       </form>
     </div>
