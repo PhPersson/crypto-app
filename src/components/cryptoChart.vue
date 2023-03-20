@@ -16,10 +16,16 @@
       <form>
         <label>
           Välj kryptovaluta:
-          <input type="radio" name="currency" value="ethereum" v-model="currency" @change="fetchData"> Ethereum
-          <input type="radio" name="currency" value="bitcoin" v-model="currency" @change="fetchData"> Bitcoin
+          <br>
+          Ethereum <input type="radio" name="currency" value="ethereum" v-model="currency" @change="fetchData"> <Icon icon="logos:ethereum-color"/>
+          <br>
+          Bitcoin <input type="radio" name="currency" value="bitcoin" v-model="currency" @change="fetchData"> <Icon icon="logos:bitcoin"/> 
         </label>
       </form>
+    </div>
+
+    <div>
+      <v-icon name="oi-repo-pull" />
     </div>
 
     <div class="crypto-chart">
@@ -42,10 +48,13 @@
 import axios from 'axios';
 import Chart from 'chart.js/auto';
 import 'chartjs-adapter-moment';
-
+import { Icon } from '@iconify/vue';
 
 export default {
     name: 'cryptoChart',
+    components: {
+      Icon,
+      },
     data() {
       return {
         chart: null,
