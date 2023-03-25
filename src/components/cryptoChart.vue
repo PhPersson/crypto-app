@@ -28,9 +28,9 @@
       </form>
     </div>
 
-    <div>
+    <!-- <div>
       <v-icon name="oi-repo-pull" />
-    </div>
+    </div> -->
 
     <div class="crypto-chart">
       <form>
@@ -45,6 +45,12 @@
       </form>
       <canvas id="crypto-chart" width="800" height="400" ref="chart"></canvas>
     </div>
+
+  <div class="footer">
+    <a href="https://github.com/PhPersson/Crypto-Chart" target="_blank">Källkod på Github <Icon icon="bytesize:github"/></a>
+  </div>
+
+
   </div>
 </template>
   
