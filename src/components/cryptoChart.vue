@@ -1,5 +1,6 @@
 <template>
   <div class="main-container">
+    <!-- Radio buttons för att låta användaren ändra färgen på grafen -->
     <div class="color-picker">
       <form>
         <label>
@@ -10,12 +11,12 @@
           <span class="color-box" style="background-color: #4bc0c0;"></span>
           <input type="radio" name="color" value="#36a2eb" v-model="chartColor" @change="updateChartColor"> Blå
           <span class="color-box" style="background-color: #36a2eb;"></span>
-          <input type=radio name=color value=#ff9f40 v-model=chartColor @change=updateChartColor> Orange
+          <input type=radio name="color" value=#ff9f40 v-model=chartColor @change=updateChartColor> Orange
           <span class="color-box" style="background-color: #ff9f40;"></span>
         </label>
       </form>
     </div>
-
+    <!-- Radio buttons för att låta användaren välja mellan Ethereum eller Bitcoin skall visas -->
     <div class="crypto-picker">
       <form>
         <label>
@@ -28,10 +29,7 @@
       </form>
     </div>
 
-    <!-- <div>
-      <v-icon name="oi-repo-pull" />
-    </div> -->
-
+    <!-- Låter anvädaren välja vilket tidsspann som ska visa de historiska priserna -->
     <div class="crypto-chart">
       <form>
         <label>
@@ -46,10 +44,10 @@
       <canvas id="crypto-chart" width="800" height="400" ref="chart"></canvas>
     </div>
 
+    <!-- Footer med länk till repository på github -->
   <div class="footer">
     <a href="https://github.com/PhPersson/Crypto-Chart" target="_blank">Källkod på Github <Icon icon="bytesize:github"/></a>
   </div>
-
 
   </div>
 </template>
@@ -75,8 +73,8 @@ export default {
         currency: "bitcoin",
       }
     },
-    // mounted används för att göra något när applikationen har laddats klart
-    // här så hämtas data från api:et och sedan genereras en tabell
+    // vue.js inbyggda funktionen mounted används för att göra något när applikationen har laddats klart
+    // här så hämtas data från api:et och sedan genereras en graf
     mounted() {
       this.fetchData();
     },
@@ -84,11 +82,10 @@ export default {
     methods: {
       fetchData() {
         const url = `https://api.coingecko.com/api/v3/coins/${this.currency}/market_chart?vs_currency=sek&days=${this.days}`;
-  
         axios.get(url)
-          .then(response => {
+          .then(response => { //När datan har hämtas från api:et så lägg alla priser i listan "prices". 
             this.prices = response.data.prices
-            this.labels = response.data.prices.map(price => new Date(price[0]).toLocaleDateString());
+            this.labels = response.data.prices.map(price => new Date(price[0]).toLocaleDateString()); //Gå igenom listan med priser och för varje pris så matchas det med datum i rätt tidzon och datum
             this.renderChart();
           })
           .catch(error => {
@@ -96,43 +93,32 @@ export default {
             alert.error("Ojdå. Följande fel uppstod:" + error);
           });
       },
-
-    filters: {
-        capitalize(value) {
-          if (!value) return '';
-          value = value.toString();
-          return value.charAt(0).toUpperCase() + value.slice(1);
-        }
-    },
-
-
     renderChart() {
-        const ctx = this.$refs.chart.getContext('2d');
-        if (this.chart) {
-          this.chart.destroy();
-        }
-
-        this.chart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: this.labels,
-          datasets: [
-            {
-              label: 
-              this.currency,
-              backgroundColor: this.chartColor,
-              data: this.prices,
-              fill: true,
-              pointBackgroundColor: 'grey',
-              pointRadius: 1.5,
-            }
-          ]
-        },
-      });
+      const ctx = this.$refs.chart.getContext('2d');
+      if (this.chart) { //Om det redan finns en tabell, så ta bort tabellen och generera en ny
+        this.chart.destroy();
+      }
+      this.chart = new Chart(ctx, {
+      type: 'line', //Ett linjediagram passar bäst för denna typen av data. Annars väljs typen av diagram här. 
+      data: {
+        labels: this.labels,
+        datasets: [
+          {
+            label: 
+            this.currency,
+            backgroundColor: this.chartColor,
+            data: this.prices,
+            fill: true,
+            pointBackgroundColor: 'grey',
+            pointRadius: 1.5,
+          }
+        ]
       },
-      updateChartColor() {
-        this.renderChart();
+      });
     },
+    updateChartColor() {
+      this.renderChart();
+    }
     },
 }
 </script>
