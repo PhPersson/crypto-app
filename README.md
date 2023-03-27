@@ -1,4 +1,5 @@
 # Crypto Chart
+_This readme is also available in [README_ENG](english)_
 En Vue.js-applikation som hämtar historiska priser för Bitcoin samt Ethereum :dollar: :credit_card: från Coingecko API och visar dem på ett linjediagram med hjälp av Chart.js.
 
 ## Installation
