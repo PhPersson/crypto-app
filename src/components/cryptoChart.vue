@@ -82,15 +82,21 @@ export default {
     methods: {
       fetchData() {
         const url = `https://api.coingecko.com/api/v3/coins/${this.currency}/market_chart?vs_currency=sek&days=${this.days}`;
-        axios.get(url)
+        axios.get(url, { timeout: 5000 })
           .then(response => { //När datan har hämtas från api:et så lägg alla priser i listan "prices". 
             this.prices = response.data.prices
             this.labels = response.data.prices.map(price => new Date(price[0]).toLocaleDateString()); //Gå igenom listan med priser och för varje pris så matchas det med datum i rätt tidzon och datum
             this.renderChart();
           })
           .catch(error => {
+            if (error.code === 'ECONNABORTED') { // kontrollera om felmeddelandet är en timeout
+              console.log(error);
+              alert("API-anropet tog för lång tid. Vänligen försök igen.");
+              console.log(error);
+            } else {
             console.error(error);
-            alert.error("Ojdå. Följande fel uppstod:" + error);
+            alert("Ojdå. Följande fel uppstod:" + error);
+            }
           });
       },
     renderChart() {
