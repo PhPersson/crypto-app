@@ -90,12 +90,11 @@ export default {
           })
           .catch(error => {
             if (error.code === 'ECONNABORTED') { // kontrollera om felmeddelandet är en timeout
-              console.log(error);
               alert("API-anropet tog för lång tid. Vänligen försök igen.");
               console.log(error);
             } else {
-            console.error(error);
-            alert("Ojdå. Följande fel uppstod:" + error);
+              console.error(error);
+              alert("Ojdå. Följande fel uppstod:" + error);
             }
           });
       },
