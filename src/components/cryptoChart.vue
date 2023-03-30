@@ -1,5 +1,10 @@
 <template>
   <div class="main-container">
+    <div v-if="showAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" @click="showAlert=false"></button>
+      {{errorMessage}}
+    </div>   
+
     <!-- Radio buttons för att låta användaren ändra färgen på grafen -->
     <div class="color-picker">
       <form>
@@ -71,6 +76,8 @@ export default {
         days: "7",
         chartColor: "",
         currency: "bitcoin",
+        showAlert: false,
+        errorMessage: "",
       }
     },
     // vue.js inbyggda funktionen mounted används för att göra något när applikationen har laddats klart
@@ -90,11 +97,13 @@ export default {
           })
           .catch(error => {
             if (error.code === 'ECONNABORTED') { // kontrollera om felmeddelandet är en timeout
-              alert("API-anropet tog för lång tid. Vänligen försök igen."); // Ett felmeddlande visas om anropet tar längre tid än 5sek
+              this.showAlert = true;
+              this.errorMessage = "API-anropet tog för lång tid. Vänligen försök igen"; // Ett felmeddlande visas om anropet tar längre tid än 5sek
               console.log(error); 
             } else {
               console.error(error);
-              alert("Ojdå. Följande fel uppstod:" + error);
+              this.showAlert = true;
+              this.errorMessage = "Ojdå. Följande fel uppstod:" + error;
             }
           });
       },

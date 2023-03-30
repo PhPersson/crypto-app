@@ -25,7 +25,7 @@ Diagrammet uppdateras för att visa historiska priser för Bitcoin för den vald
 * [axios](https://github.com/axios/axios)
 * [Chart.js](https://www.chartjs.org/)
 * [Coingecko API](https://www.coingecko.com/en/api/documentation)
-
+* [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 
 # Demo
 Du hittar en live demo av applikationen på [Crypto Chart](https://exquisite-bavarois-73d29d.netlify.app/)
@@ -38,4 +38,4 @@ Det här projektet är licensierat under Apache License 2.0. Se  [LICENSE](LICEN
 - [ ] Låta användaren söka efter en specifik kryptovaluta
 - [X] Låta användaren ändra färgen på grafen
 - [ ] Gör hela appliaktionen responsiv för mindre skärmar
-- [ ] Visa bättre felmeddelanden är alert
+- [X] Visa bättre felmeddelanden är alert
