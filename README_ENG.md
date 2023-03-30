@@ -18,10 +18,11 @@ Select the time period from the drop-down menu.
 The chart updates to display the historical prices for Bitcoin for the selected time period.
 
 ## Technologies Used
-Vue.js
-axios
-Chart.js
-Coingecko API
+* [Vue.js](https://vuejs.org/)
+* [axios](https://github.com/axios/axios)
+* [Chart.js](https://www.chartjs.org/)
+* [Coingecko API](https://www.coingecko.com/en/api/documentation)
+* [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 
 # Demo
 You can find a live demo of the application at [Crypto Chart](https://exquisite-bavarois-73d29d.netlify.app/)
@@ -33,4 +34,5 @@ This project is licensed under the Apache License 2.0. See LICENSE for more info
 ## Improvements
 - [ ] Allow the user to search for a specific cryptocurrency
 - [X] Allow the user to change the color of the chart
-- [ ] Make the entire application responsive for smaller screens.
+- [ ] Make the entire application responsive for smaller screens..
+- [X] Display better error messages than alerts.
