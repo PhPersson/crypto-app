@@ -38,4 +38,4 @@ Det här projektet är licensierat under Apache License 2.0. Se  [LICENSE](LICEN
 - [ ] Låta användaren söka efter en specifik kryptovaluta
 - [X] Låta användaren ändra färgen på grafen
 - [ ] Gör hela appliaktionen responsiv för mindre skärmar
-- [X] Visa bättre felmeddelanden är alert
+- [X] Visa bättre felmeddelanden än alert
