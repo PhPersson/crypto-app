@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div class="main-div">
     <div v-if="showAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" @click="showAlert=false"></button>
       {{errorMessage}}
@@ -10,6 +10,7 @@
       <form>
         <label>
           Välj färg:
+        </label>
           <input type="radio" name="color" value="#ff6384" v-model="chartColor" @change="updateChartColor"> Röd
           <span class="color-box" style="background-color: #ff6384;"></span>
           <input type="radio" name="color" value="#4bc0c0" v-model="chartColor" @change="updateChartColor"> Grön
@@ -18,22 +19,24 @@
           <span class="color-box" style="background-color: #36a2eb;"></span>
           <input type=radio name="color" value=#ff9f40 v-model=chartColor @change=updateChartColor> Orange
           <span class="color-box" style="background-color: #ff9f40;"></span>
-        </label>
       </form>
     </div>
+    
     <!-- Radio buttons för att låta användaren välja mellan Ethereum eller Bitcoin skall visas -->
     <div class="crypto-picker">
       <form>
         <label>
           Välj kryptovaluta:
-          <br>
-          Ethereum <input type="radio" name="currency" value="ethereum" v-model="currency" @change="fetchData"> <Icon icon="logos:ethereum-color"/>
-          <br>
-          Bitcoin <input type="radio" name="currency" value="bitcoin" v-model="currency" @change="fetchData"> <Icon icon="logos:bitcoin"/> 
-          <br>
-          Tether <input type="radio" name="currency" value="tether" v-model="currency" @change="fetchData"> <Icon icon="tabler:brand-tether"/> 
-        
         </label>
+          <li>
+          Bitcoin <input type="radio" name="currency" value="bitcoin" v-model="currency" @change="fetchData"> <Icon icon="logos:bitcoin"/>
+          </li>
+          <li>
+          Ethereum <input type="radio" name="currency" value="ethereum" v-model="currency" @change="fetchData"> <Icon icon="logos:ethereum-color"/>
+          </li>
+          <li>
+          Tether <input type="radio" name="currency" value="tether" v-model="currency" @change="fetchData"> <Icon icon="tabler:brand-tether"/>
+        </li>
       </form>
     </div>
 
@@ -42,14 +45,14 @@
       <form>
         <label>
           Välj tidsperiod:
+        </label>
           <select v-model="days" @change="fetchData">
             <option value="7">7 Dagar</option>
             <option value="30">30 Dagar</option>
             <option value="60">60 Dagar</option>
           </select>
-        </label>
       </form>
-      <canvas id="crypto-chart" width="800" height="400" ref="chart"></canvas>
+      <canvas id="crypto-chart" width="900" height="450" ref="chart"></canvas>
     </div>
 
     <!-- Footer med länk till repository på github -->
