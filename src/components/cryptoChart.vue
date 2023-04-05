@@ -1,5 +1,5 @@
 <template>
-  <div class="main-div">
+  <div class="main-container">
     <div v-if="showAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" @click="showAlert=false"></button>
       {{errorMessage}}
@@ -21,7 +21,6 @@
           <span class="color-box" style="background-color: #ff9f40;"></span>
       </form>
     </div>
-    
     <!-- Radio buttons för att låta användaren välja mellan Ethereum eller Bitcoin skall visas -->
     <div class="crypto-picker">
       <form>
@@ -52,7 +51,7 @@
             <option value="60">60 Dagar</option>
           </select>
       </form>
-      <canvas id="crypto-chart" width="900" height="450" ref="chart"></canvas>
+      <canvas id="crypto-chart" width="800" height="400" ref="chart"></canvas>
     </div>
 
     <!-- Footer med länk till repository på github -->
