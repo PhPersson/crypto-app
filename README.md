@@ -30,12 +30,15 @@ Diagrammet uppdateras för att visa historiska priser för Bitcoin för den vald
 # Demo
 Du hittar en live demo av applikationen på [Crypto Chart](https://exquisite-bavarois-73d29d.netlify.app/)
 
-## Licens
-Det här projektet är licensierat under Apache License 2.0. Se  [LICENSE](LICENSE) för mer information.
+
 
 ## Förbättringar
 
 - [ ] Låta användaren söka efter en specifik kryptovaluta
+    - Delvis svårt att implementera pga. sättet API:et är uppbyggt. "id" för att söka efter valuta matchar inte alltid namnet på valutan
 - [X] Låta användaren ändra färgen på grafen
 - [ ] Gör hela appliaktionen responsiv för mindre skärmar
 - [X] Visa bättre felmeddelanden än alert
+
+## Licens
+Det här projektet är licensierat under Apache License 2.0. Se  [LICENSE](LICENSE) för mer information.
