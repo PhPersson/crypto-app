@@ -30,6 +30,9 @@
           Ethereum <input type="radio" name="currency" value="ethereum" v-model="currency" @change="fetchData"> <Icon icon="logos:ethereum-color"/>
           <br>
           Bitcoin <input type="radio" name="currency" value="bitcoin" v-model="currency" @change="fetchData"> <Icon icon="logos:bitcoin"/> 
+          <br>
+          Tether <input type="radio" name="currency" value="tether" v-model="currency" @change="fetchData"> <Icon icon="tabler:brand-tether"/> 
+        
         </label>
       </form>
     </div>

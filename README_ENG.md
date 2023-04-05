@@ -28,11 +28,12 @@ The chart updates to display the historical prices for Bitcoin for the selected 
 You can find a live demo of the application at [Crypto Chart](https://exquisite-bavarois-73d29d.netlify.app/)
 
 
-## License
-This project is licensed under the Apache License 2.0. See LICENSE for more information.
 
 ## Improvements
 - [ ] Allow the user to search for a specific cryptocurrency
 - [X] Allow the user to change the color of the chart
 - [ ] Make the entire application responsive for smaller screens..
 - [X] Display better error messages than alerts.
+
+## License
+This project is licensed under the Apache License 2.0. See LICENSE for more information.

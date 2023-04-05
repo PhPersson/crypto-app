@@ -5,27 +5,28 @@
     align-items: center;
   }
   
-  .color-picker {
-    margin-bottom: 20px;
-  }
+.color-picker {
+  margin-bottom: 20px;
+  margin: 10px;
+}
 
-  .color-box {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    margin-right: 0.1em;
-  }
-  
-  .crypto-picker {
-    width: 300px;
-    margin-left: 20px;
-    
-  }
-  
-  .crypto-chart {
-    margin-bottom: 30px;
-  }
 
+.color-box {
+display: inline-block;
+width: 15px;
+height: 15px;
+margin-right: 1em;
+}
+
+.crypto-picker {
+  width: 300px;
+
+  margin: 10px;
+}
+
+.crypto-chart {
+  margin-bottom: 30px;
+}
 
   
 .footer {
