@@ -37,4 +37,4 @@ You can find a live demo of the application at [Crypto Chart](https://exquisite-
 - [X] Display better error messages than alerts.
 
 ## License
-This project is licensed under the Apache License 2.0. See LICENSE for more information.
+This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for more information.
