@@ -3,20 +3,12 @@
   "extends": [
     "config:base"
   ],
-  {
-  "labels": ["dependencies"],
+  "prHourlyLimit": 3,
   "packageRules": [
     {
-      "matchPackagePatterns": ["eslint"],
-      "labels": ["linting"]
-    },
-    {
-      "matchDepTypes": ["optionalDependencies"],
-      "addLabels": ["optional"]
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
     }
   ]
-},
-  
-  
 }
 
