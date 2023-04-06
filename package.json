@@ -12,9 +12,6 @@
     "bootstrap": "^5.2.3",
     "chart.js": "^4.2.1",
     "chartjs-adapter-moment": "^1.0.1",
-    "core-js": "^3.8.3",
-    "lightvue": "^1.5.1",
-    "oh-vue-icons": "^1.0.0-rc3",
     "vue": "^3.2.13"
   },
   "devDependencies": {
