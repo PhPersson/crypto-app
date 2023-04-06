@@ -1,5 +1,5 @@
 # Crypto Chart
-A Vue.js application that fetches historical prices for Bitcoin and Ethereum :dollar: :credit_card: from Coingecko API and displays them on a line chart using Chart.js.
+A Vue.js application that fetches historical prices for various cryptocurrencies :dollar: :credit_card: from Coingecko API and displays them on a line chart using Chart.js.
 
 ## Installation
 Clone this repository.
@@ -31,8 +31,9 @@ You can find a live demo of the application at [Crypto Chart](https://exquisite-
 
 ## Improvements
 - [ ] Allow the user to search for a specific cryptocurrency
+  - Partially difficult to implement due to the structure of the API. The "id" used to search for a currency may not always match the name of the currency.
+- [ ] Make the entire application responsive for smaller screens.
 - [X] Allow the user to change the color of the chart
-- [ ] Make the entire application responsive for smaller screens..
 - [X] Display better error messages than alerts.
 
 ## License
