@@ -3,8 +3,7 @@
   "extends": [
     "config:base"
   ]
-}
-{
+  {
   "labels": ["dependencies"],
   "packageRules": [
     {
@@ -17,3 +16,7 @@
     }
   ]
 }
+  
+  
+}
+
