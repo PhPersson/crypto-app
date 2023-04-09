@@ -32,6 +32,10 @@
           Bitcoin <input type="radio" name="currency" value="bitcoin" v-model="currency" @change="fetchData"> <Icon icon="logos:bitcoin"/>
           </li>
           <li>
+          Dogecoin <input type="radio" name="currency" value="dogecoin" v-model="currency" @change="fetchData"> <Icon icon="simple-icons:dogecoin"/>
+          </li>
+
+          <li>
           Ethereum <input type="radio" name="currency" value="ethereum" v-model="currency" @change="fetchData"> <Icon icon="logos:ethereum-color"/>
           </li>
           <li>
