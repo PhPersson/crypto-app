@@ -22,7 +22,7 @@
       </form>
     </div>
     
-    <!-- Radio buttons för att låta användaren välja mellan Ethereum eller Bitcoin skall visas -->
+    <!-- Radio buttons för att låta användaren välja vilken kryptovaluta som skall visas -->
     <div class="crypto-picker">
       <form>
         <label>
@@ -33,19 +33,18 @@
           </li>
           <li>
           Dogecoin <input type="radio" name="currency" value="dogecoin" v-model="currency" @change="fetchData"> <Icon icon="simple-icons:dogecoin"/>
-        </li>
-
+          </li>
           <li>
           Ethereum <input type="radio" name="currency" value="ethereum" v-model="currency" @change="fetchData"> <Icon icon="logos:ethereum-color"/>
           </li>
           <li>
           Tether <input type="radio" name="currency" value="tether" v-model="currency" @change="fetchData"> <Icon icon="tabler:brand-tether"/>
-        </li>
+          </li>
       </form>
     </div>
 
     <!-- Låter anvädaren välja vilket tidsspann som ska visa de historiska priserna -->
-    <div class="crypto-chart">
+    <div class="crypto-chart-div">
       <form>
         <label>
           Välj tidsperiod:
@@ -111,9 +110,9 @@ export default {
               this.errorMessage = "API-anropet tog för lång tid. Vänligen försök igen"; // Ett felmeddlande visas om anropet tar längre tid än 5sek
               console.log(error); 
             } else {
-              console.error(error);
               this.showAlert = true;
               this.errorMessage = "Ojdå. Följande fel uppstod:" + error;
+              console.error(error);
             }
           });
       },
