@@ -32,7 +32,7 @@ You can find a live demo of the application at [Crypto Chart](https://exquisite-
 ## Improvements
 - [ ] Allow the user to search for a specific cryptocurrency
   - Partially difficult to implement due to the structure of the API. The "id" used to search for a currency may not always match the name of the currency.
-- [ ] Make the entire application responsive for smaller screens.
+- [X] Make the entire application responsive for smaller screens.
 - [X] Allow the user to change the color of the chart
 - [X] Display better error messages than alerts.
 

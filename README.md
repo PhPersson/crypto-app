@@ -36,7 +36,7 @@ Du hittar en live demo av applikationen på [Crypto Chart](https://exquisite-bav
 
 - [ ] Låta användaren söka efter en specifik kryptovaluta
     - Delvis svårt att implementera pga. sättet API:et är uppbyggt. "id" för att söka efter valuta matchar inte alltid namnet på valutan
-- [ ] Gör hela appliaktionen responsiv för mindre skärmar
+- [X] Gör hela appliaktionen bättre anpassad för mindre skärmar
 - [X] Låta användaren ändra färgen på grafen
 - [X] Visa bättre felmeddelanden än alert
 
