@@ -1,24 +1,33 @@
 .main-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
 
 .color-box {
   display: inline-block;
   width: 15px;
   height: 15px;
-   margin-right: 1em;
-  
+  margin-right: 1em;
 }
 
-.crypto-picker {
-  width: 300px;
-  margin: 10px;
-  margin-bottom: 20px;
+.crypto-chart-div {
+  margin-bottom: 30px;
 }
+
+.picker-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color-picker {
+  margin-right: 20px;
+}
+
 
 .footer {
   position: fixed;
@@ -28,6 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .footer > a {
