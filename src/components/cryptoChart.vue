@@ -4,43 +4,53 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" @click="showAlert=false"></button>
       {{errorMessage}}
     </div>   
+    <div class="picker-div">
+      <!-- Radio buttons för att låta användaren ändra färgen på grafen -->
+      <div class="color-picker">
+        <form>
+          <label>
+            Välj färg:
+          </label>
+            <li>
+              <input type="radio" name="color" value="#ff6384" v-model="chartColor" @change="updateChartColor"> Röd
+              <span class="color-box" style="background-color: #ff6384;"></span>
+            </li>
 
-    <!-- Radio buttons för att låta användaren ändra färgen på grafen -->
-    <div class="color-picker">
-      <form>
-        <label>
-          Välj färg:
-        </label>
-          <input type="radio" name="color" value="#ff6384" v-model="chartColor" @change="updateChartColor"> Röd
-          <span class="color-box" style="background-color: #ff6384;"></span>
-          <input type="radio" name="color" value="#4bc0c0" v-model="chartColor" @change="updateChartColor"> Grön
-          <span class="color-box" style="background-color: #4bc0c0;"></span>
-          <input type="radio" name="color" value="#36a2eb" v-model="chartColor" @change="updateChartColor"> Blå
-          <span class="color-box" style="background-color: #36a2eb;"></span>
-          <input type=radio name="color" value=#ff9f40 v-model=chartColor @change=updateChartColor> Orange
-          <span class="color-box" style="background-color: #ff9f40;"></span>
-      </form>
-    </div>
-    
-    <!-- Radio buttons för att låta användaren välja vilken kryptovaluta som skall visas -->
-    <div class="crypto-picker">
-      <form>
-        <label>
-          Välj kryptovaluta:
-        </label>
-          <li>
-          Bitcoin <input type="radio" name="currency" value="bitcoin" v-model="currency" @change="fetchData"> <Icon icon="logos:bitcoin"/>
-          </li>
-          <li>
-          Dogecoin <input type="radio" name="currency" value="dogecoin" v-model="currency" @change="fetchData"> <Icon icon="simple-icons:dogecoin"/>
-          </li>
-          <li>
-          Ethereum <input type="radio" name="currency" value="ethereum" v-model="currency" @change="fetchData"> <Icon icon="logos:ethereum-color"/>
-          </li>
-          <li>
-          Tether <input type="radio" name="currency" value="tether" v-model="currency" @change="fetchData"> <Icon icon="tabler:brand-tether"/>
-          </li>
-      </form>
+            <li>
+            <input type="radio" name="color" value="#4bc0c0" v-model="chartColor" @change="updateChartColor"> Grön
+            <span class="color-box" style="background-color: #4bc0c0;"></span>
+            </li>
+            <li>
+            <input type="radio" name="color" value="#36a2eb" v-model="chartColor" @change="updateChartColor"> Blå
+            <span class="color-box" style="background-color: #36a2eb;"></span>
+            </li>
+            <li>
+            <input type=radio name="color" value=#ff9f40 v-model=chartColor @change=updateChartColor> Orange
+            <span class="color-box" style="background-color: #ff9f40;"></span>
+            </li>
+        </form>
+      </div>
+      
+      <!-- Radio buttons för att låta användaren välja vilken kryptovaluta som skall visas -->
+      <div class="crypto-picker">
+        <form>
+          <label>
+            Välj kryptovaluta:
+          </label>
+            <li>
+            Bitcoin <input type="radio" name="currency" value="bitcoin" v-model="currency" @change="fetchData"> <Icon icon="logos:bitcoin"/>
+            </li>
+            <li>
+            Dogecoin <input type="radio" name="currency" value="dogecoin" v-model="currency" @change="fetchData"> <Icon icon="simple-icons:dogecoin"/>
+            </li>
+            <li>
+            Ethereum <input type="radio" name="currency" value="ethereum" v-model="currency" @change="fetchData"> <Icon icon="logos:ethereum-color"/>
+            </li>
+            <li>
+            Tether <input type="radio" name="currency" value="tether" v-model="currency" @change="fetchData"> <Icon icon="tabler:brand-tether"/>
+            </li>
+        </form>
+      </div>
     </div>
 
     <!-- Låter anvädaren välja vilket tidsspann som ska visa de historiska priserna -->
