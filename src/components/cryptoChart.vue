@@ -12,20 +12,20 @@
             Välj färg:
           </label>
             <li>
-              <input type="radio" name="color" value="#ff6384" v-model="chartColor" @change="updateChartColor"> Röd
+              <input type="radio" class="form-check-input" name="color" value="#ff6384" v-model="chartColor" @change="updateChartColor"> Röd
               <span class="color-box" style="background-color: #ff6384;"></span>
             </li>
 
             <li>
-            <input type="radio" name="color" value="#4bc0c0" v-model="chartColor" @change="updateChartColor"> Grön
+            <input type="radio" class="form-check-input" name="color" value="#4bc0c0" v-model="chartColor" @change="updateChartColor"> Grön
             <span class="color-box" style="background-color: #4bc0c0;"></span>
             </li>
             <li>
-            <input type="radio" name="color" value="#36a2eb" v-model="chartColor" @change="updateChartColor"> Blå
+            <input type="radio" class="form-check-input" name="color" value="#36a2eb" v-model="chartColor" @change="updateChartColor"> Blå
             <span class="color-box" style="background-color: #36a2eb;"></span>
             </li>
             <li>
-            <input type=radio name="color" value=#ff9f40 v-model=chartColor @change=updateChartColor> Orange
+            <input type=radio class="form-check-input" name="color" value=#ff9f40 v-model=chartColor @change=updateChartColor> Orange
             <span class="color-box" style="background-color: #ff9f40;"></span>
             </li>
         </form>
@@ -38,16 +38,16 @@
             Välj kryptovaluta:
           </label>
             <li>
-            Bitcoin <input type="radio" name="currency" value="bitcoin" v-model="currency" @change="fetchData"> <Icon icon="logos:bitcoin"/>
+            Bitcoin <input type="radio" class="form-check-input" name="currency" value="bitcoin" v-model="currency" @change="fetchData"> <Icon icon="logos:bitcoin"/>
             </li>
             <li>
-            Dogecoin <input type="radio" name="currency" value="dogecoin" v-model="currency" @change="fetchData"> <Icon icon="simple-icons:dogecoin"/>
+            Dogecoin <input type="radio" class="form-check-input" name="currency" value="dogecoin" v-model="currency" @change="fetchData"> <Icon icon="simple-icons:dogecoin"/>
             </li>
             <li>
-            Ethereum <input type="radio" name="currency" value="ethereum" v-model="currency" @change="fetchData"> <Icon icon="logos:ethereum-color"/>
+            Ethereum <input type="radio" class="form-check-input" name="currency" value="ethereum" v-model="currency" @change="fetchData"> <Icon icon="logos:ethereum-color"/>
             </li>
             <li>
-            Tether <input type="radio" name="currency" value="tether" v-model="currency" @change="fetchData"> <Icon icon="tabler:brand-tether"/>
+            Tether <input type="radio" class="form-check-input" name="currency" value="tether" v-model="currency" @change="fetchData"> <Icon icon="tabler:brand-tether"/>
             </li>
         </form>
       </div>
@@ -69,9 +69,9 @@
     </div>
 
     <!-- Footer med länk till repository på github -->
-  <div class="footer">
+    <footer class="text-center fixed-bottom " >
     <a href="https://github.com/PhPersson/Crypto-Chart" target="_blank">Källkod på Github <Icon icon="bytesize:github"/></a>
-  </div>
+  </footer>
 
   </div>
 </template>

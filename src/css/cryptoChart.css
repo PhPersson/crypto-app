@@ -29,21 +29,6 @@
 }
 
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  height: 50px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.footer > a {
-  color: #000;
-}
-
 /* För mindre skärmar */
 @media (max-width: 767px) {
   .main-div {
