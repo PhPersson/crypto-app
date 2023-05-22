@@ -1,23 +1,16 @@
 <template>
   <div class="app">
-    <cryptoChart />
+    <CryptoApp />
   </div>
 </template>
 
 <script>
-import cryptoChart from './components/cryptoChart.vue';
+import CryptoApp from './components/CryptoApp.vue';
 
 export default {
   name: 'App',
   components: {
-    cryptoChart
+    CryptoApp
   }
 }
 </script>
-
-<style>
-/* .app {
-  max-width: 1200px;
-  margin: 0 auto;
-} */
-</style>

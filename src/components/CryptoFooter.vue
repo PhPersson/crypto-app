@@ -10,12 +10,10 @@
 <script>
 import { Icon } from '@iconify/vue';
   export default {
-    name: 'footerVue',
-
+    name: 'CryptoFooter',
     components: {
       Icon,
     },
-
   };
-  
-  </script>
+
+</script>

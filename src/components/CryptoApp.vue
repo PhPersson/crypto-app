@@ -53,7 +53,6 @@
       </div>
     </div>
 
-    <!-- Låter anvädaren välja vilket tidsspann som ska visa de historiska priserna -->
     <div class="crypto-chart-div">
       <form>
         <label>
@@ -67,9 +66,7 @@
       </form>
       <canvas id="crypto-chart" width="900" height="450" ref="chart"></canvas>
     </div>
-    <footerVue/>
-
-
+    <CryptoFooter/>
   </div>
 </template>
   
@@ -77,13 +74,13 @@
 import axios from 'axios';
 import Chart from 'chart.js/auto';
 import 'chartjs-adapter-moment';
-import footerVue from './footer.vue';
+import CryptoFooter from './CryptoFooter.vue';
 
 export default {
-    name: 'cryptoChart',
+    name: 'CryptoApp',
     components: {
-      footerVue,
-      },
+      CryptoFooter,
+    },
     data() {
       return {
         chart: null,
@@ -153,4 +150,53 @@ export default {
 }
 </script>
 
-<style src="..\css\cryptoChart.css"> </style>
+<style>
+
+.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.color-box {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 1em;
+}
+
+.crypto-chart-div {
+  margin-bottom: 30px;
+}
+
+.picker-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color-picker {
+  margin-right: 20px;
+}
+
+
+
+/* För mindre skärmar */
+@media (max-width: 767px) {
+  .main-div {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Anpassa chart-elementet */
+  #crypto-chart {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+</style>
