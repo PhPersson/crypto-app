@@ -67,11 +67,8 @@
       </form>
       <canvas id="crypto-chart" width="900" height="450" ref="chart"></canvas>
     </div>
+    <footerVue/>
 
-    <!-- Footer med länk till repository på github -->
-    <footer class="text-center fixed-bottom " >
-    <a href="https://github.com/PhPersson/Crypto-Chart" target="_blank">Källkod på Github <Icon icon="bytesize:github"/></a>
-  </footer>
 
   </div>
 </template>
@@ -80,12 +77,12 @@
 import axios from 'axios';
 import Chart from 'chart.js/auto';
 import 'chartjs-adapter-moment';
-import { Icon } from '@iconify/vue';
+import footerVue from './footer.vue';
 
 export default {
     name: 'cryptoChart',
     components: {
-      Icon,
+      footerVue,
       },
     data() {
       return {
