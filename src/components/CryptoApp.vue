@@ -1,9 +1,6 @@
 <template>
   <div class="main-div">
-    <div v-if="showAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" @click="showAlert=false"></button>
-      {{errorMessage}}
-    </div>   
+    <ErrorComp :errorMessage="this.errorMessage" v-if="showAlert"/>
     <div class="picker-div">
       <!-- Radio buttons för att låta användaren ändra färgen på grafen -->
       <div class="color-picker">
@@ -75,11 +72,13 @@ import axios from 'axios';
 import Chart from 'chart.js/auto';
 import 'chartjs-adapter-moment';
 import CryptoFooter from './CryptoFooter.vue';
+import ErrorComp from './ErrorComp.vue';
 
 export default {
     name: 'CryptoApp',
     components: {
       CryptoFooter,
+      ErrorComp,
     },
     data() {
       return {
