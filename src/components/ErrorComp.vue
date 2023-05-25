@@ -3,9 +3,9 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" @click="showAlert = false"></button>
       {{ errorMessage }}
     </div>
-  </template>
+</template>
   
-  <script>
+<script>
 export default {
     props: {
       errorMessage: {
@@ -19,5 +19,5 @@ export default {
       };
     },
   };
-  </script>
+</script>
   
