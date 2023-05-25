@@ -49,8 +49,7 @@
         </form>
       </div>
     </div>
-
-    <div class="crypto-chart-div">
+    
       <form>
         <label>
           Välj tidsperiod:
@@ -61,6 +60,8 @@
             <option value="60">60 Dagar</option>
           </select>
       </form>
+
+    <div class="crypto-chart-div">
       <canvas id="crypto-chart" width="900" height="450" ref="chart"></canvas>
     </div>
     <CryptoFooter/>
@@ -73,12 +74,14 @@ import Chart from 'chart.js/auto';
 import 'chartjs-adapter-moment';
 import CryptoFooter from './CryptoFooter.vue';
 import ErrorComp from './ErrorComp.vue';
+import { Icon } from '@iconify/vue';
 
 export default {
     name: 'CryptoApp',
     components: {
       CryptoFooter,
       ErrorComp,
+      Icon
     },
     data() {
       return {
@@ -125,27 +128,40 @@ export default {
         this.chart.destroy();
       }
       this.chart = new Chart(ctx, {
-      type: 'line', //Ett linjediagram passar bäst för denna typen av data. Annars väljs typen av diagram här. 
-      data: {
-        labels: this.labels,
-        datasets: [
-          {
-            label: 
-            this.currency,
-            backgroundColor: this.chartColor,
-            data: this.prices,
-            fill: true,
-            pointBackgroundColor: 'grey',
-            pointRadius: 1.5,
-          }
-        ]
-      },
-      });
+        type: 'line', //Ett linjediagram passar bäst för denna typen av data. Annars väljs typen av diagram här. 
+        data: {
+          labels: this.labels,
+          datasets: [
+            {
+              label: this.currency.charAt(0).toUpperCase() + this.currency.slice(1),
+              backgroundColor: this.chartColor,
+              data: this.prices,
+              fill: true,
+              pointBackgroundColor: 'grey',
+              pointRadius: 1.5,
+            }
+          ]
+        },
+        options: {
+          scales: {
+            y: {
+              ticks: {
+                callback: (value) => {
+                  if (value >= 1000) {
+                    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' kr';
+                  }
+                  return value + ' kr';
+                },
+              }
+            },
+          },
+        },
+    });
     },
     updateChartColor() {
       this.renderChart();
     }
-    },
+  },
 }
 </script>
 
@@ -184,18 +200,12 @@ export default {
 
 
 /* För mindre skärmar */
-@media (max-width: 767px) {
-  .main-div {
-    grid-template-columns: 1fr;
-  }
-  
+@media (max-width: 600px) {
+
   /* Anpassa chart-elementet */
   #crypto-chart {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 }
-
-
-
 </style>
