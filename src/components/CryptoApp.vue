@@ -89,7 +89,7 @@ export default {
         prices: [],
         labels: [],
         days: "7",
-        chartColor: "",
+        chartColor: "#36a2eb",
         currency: "bitcoin",
         showAlert: false,
         errorMessage: "",
@@ -100,7 +100,7 @@ export default {
     mounted() {
       this.fetchData();
     },
-
+    
     methods: {
       fetchData() {
         const url = `https://api.coingecko.com/api/v3/coins/${this.currency}/market_chart?vs_currency=sek&days=${this.days}`;
@@ -124,6 +124,7 @@ export default {
       },
     renderChart() {
       const ctx = this.$refs.chart.getContext('2d');
+
       if (this.chart) { //Om det redan finns en tabell, så ta bort tabellen och generera en ny
         this.chart.destroy();
       }
