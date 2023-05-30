@@ -28,7 +28,7 @@ Diagrammet uppdateras för att visa historiska priser för Bitcoin för den vald
 * [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 
 # Demo
-Du hittar en live demo av applikationen på [Crypto Chart](https://exquisite-bavarois-73d29d.netlify.app/)
+Du hittar en live demo av applikationen på [Crypto Chart](cryptchartapp.netlify.app)
 
 
 

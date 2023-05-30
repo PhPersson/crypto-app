@@ -25,7 +25,7 @@ The chart updates to display the historical prices for Bitcoin for the selected 
 * [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 
 # Demo
-You can find a live demo of the application at [Crypto Chart](https://exquisite-bavarois-73d29d.netlify.app/)
+You can find a live demo of the application at [Crypto Chart](cryptchartapp.netlify.app)
 
 
 
