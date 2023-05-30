@@ -150,7 +150,7 @@ export default {
                   if (value >= 1000) {
                     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' kr';
                   }
-                  return value + ' kr';
+                  return value.toFixed(2) + ' kr';
                 },
               }
             },
