@@ -49,7 +49,7 @@
         </form>
       </div>
     </div>
-    
+      <!-- Dropdown för att låta användaren att byta mellan 7, 30 eller 60 dagars data -->
       <form>
         <label>
           Välj tidsperiod:
@@ -203,7 +203,6 @@ export default {
 /* För mindre skärmar */
 @media (max-width: 600px) {
 
-  /* Anpassa chart-elementet */
   #crypto-chart {
     width: 80%;
     height: auto;
