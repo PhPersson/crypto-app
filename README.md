@@ -34,7 +34,7 @@ Du hittar en live demo av applikationen på [Crypto Chart](cryptchartapp.netlify
 
 ## Förbättringar
 
-- [ ] ~~Låta användaren söka efter en specifik kryptovaluta
+- [ ] ~~Låta användaren söka efter en specifik kryptovaluta~~
     - Kommer ej att implementeras pga. sättet API:et är uppbyggt. "id" för att söka efter valuta matchar inte alltid namnet på valutan.
 - [X] Gör hela appliaktionen bättre anpassad för mindre skärmar
 - [X] Låta användaren ändra färgen på grafen
