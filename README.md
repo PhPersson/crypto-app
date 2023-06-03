@@ -3,6 +3,8 @@ _This readme is also available in [english](README_ENG.md)_
 
 En Vue.js-applikation som hämtar historiska priser för olika kryptovalutor :dollar: :credit_card: från Coingecko API och visar dem på ett linjediagram med hjälp av Chart.js.
 
+Även nyhetsartiklar ang crypto går att hitta och läsa. 
+
 ## Installation
 Klona detta repository.
 * Kör nedan kommando i projektets katalog för att installera nödvändiga paket.
@@ -30,7 +32,9 @@ Diagrammet uppdateras för att visa historiska priser för Bitcoin för den vald
 # Demo
 Du hittar en live demo av applikationen på [Crypto Chart](cryptchartapp.netlify.app)
 
-
+## Nyhetsartiklar
+Tyvärr fungerar inte nyhetsartiklar på demot. Detta är pga api:et inte tillåter distrubering av api utan betalning
+    "Requests from the browser are not allowed on the Developer plan, except from localhost."
 
 ## Förbättringar
 
