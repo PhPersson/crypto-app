@@ -54,7 +54,7 @@ export default {
     methods: {
         async fetchArticles() {
         const apiKey =  `${process.env.VUE_APP_API_KEY}`
-        const apiUrl = `https://newsapi.org/v2/everything?q=crypto&from=${this.getLast30Days()}&sortBy=publishedAt&apiKey=${apiKey}`;
+        const apiUrl = `https://newsapi.org/v2/everything?q=crypto&pageSize=20&from=${this.getLast30Days()}&sortBy=publishedAt&apiKey=${apiKey}`;
 
         try {
             const response = await axios.get(apiUrl);
@@ -65,7 +65,6 @@ export default {
             this.error = true;
             this.loading = false;
         }
-
         },
 
         getLast30Days() {
