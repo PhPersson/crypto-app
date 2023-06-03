@@ -35,7 +35,7 @@ Du hittar en live demo av applikationen på [Crypto Chart](cryptchartapp.netlify
 ## Nyhetsartiklar
 Tyvärr fungerar inte nyhetsartiklar på demot. Detta är pga api:et inte tillåter distrubering av api utan betalning
     "Requests from the browser are not allowed on the Developer plan, except from localhost."
-
+![News page](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDU5M2FkNmU1ODZlN2MyMDlkMjk3ZDFiMDRjNDliNjgxZmM2MzIzZCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/kgnjhTshlmH2ktFTGe/giphy.gif)
 ## Förbättringar
 
 - [ ] ~~Låta användaren söka efter en specifik kryptovaluta~~
