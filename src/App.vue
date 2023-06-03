@@ -1,16 +1,16 @@
 <template>
   <div class="app">
-    <CryptoApp />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import CryptoApp from './components/CryptoApp.vue';
+// import CryptoApp from './components/CryptoApp.vue';
 
 export default {
   name: 'App',
   components: {
-    CryptoApp
+
   }
 }
 </script>
