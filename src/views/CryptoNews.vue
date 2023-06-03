@@ -13,22 +13,22 @@
     </div>
 
     <div v-else>
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-5 mb-4" v-for="article in articles" :key="article.title">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5 mb-4" v-for="article in articles" :key="article.title">
+        <div class="card">
             <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
-                <img :src="article.urlToImage" class="img-fluid" />
-                <a :href="article.url">
-                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
+            <img :src="article.urlToImage" class="card-img-top" alt="Article Image" />
+            <a :href="article.url"> </a>
             </div>
+            <div class="card-body">
             <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">News of the day</span>
-            <h4><strong>{{ article.title }}</strong></h4>
-            <p class="text-muted">{{ article.description }}</p>
-            <a :href="article.url" target="_blank" rel="noopener noreferrer">
-                <button type="button" class="btn btn-primary">Read more</button>
-            </a>
+            <h4 class="card-title"><strong>{{ article.title }}</strong></h4>
+            <p class="card-text text-muted">{{ article.description }}</p>
+            <a :href="article.url" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Read more</a>
             </div>
         </div>
+        </div>
+    </div>
     </div>
 
   </div>
