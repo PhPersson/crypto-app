@@ -1,16 +1,14 @@
 <template>
 
-
 <div class="container">
   <div class="row justify-content-center">
-    <h1 class="display-3">News about crypto the last 7 days from <i>{{ this.getLast30Days() }}</i>
-    </h1>
+    <h1 class="display-3">News about crypto the last 7 days from <i>{{ this.getLast30Days() }}</i> </h1>
 
     <div v-if="loading">
       <p>Loading...</p>
     </div>
 
-    <div v-else-if="error">
+    <div class="error" v-else-if="error">
       <p>Error occurred while fetching the articles. Please try again later.</p>
     </div>
 
@@ -32,6 +30,11 @@
             </div>
         </div>
     </div>
+    <div v-if="statusCode === 426">
+        <Popper :content="`Please note that this project's API can only be accessed from localhost. To run the project se the github for more info 💵 `">
+            <button type="button" class="btn btn-light">No articles?</button>
+         </Popper>
+    </div>
   </div>
 </div>
 
@@ -40,12 +43,17 @@
 
 <script>
 import axios from 'axios';
+import Popper from "vue3-popper";
 export default {
+    components: {
+      Popper
+    },
     data() {
         return {
             articles: [],
             loading: true,
             error: false,
+            statusCode: 0,
         };
     },
     mounted() {
@@ -64,6 +72,7 @@ export default {
             console.error(error);
             this.error = true;
             this.loading = false;
+            this.statusCode = error.response.status;
         }
         },
 
@@ -80,6 +89,11 @@ export default {
 
 .display-3 {
     padding: 5%;
+    text-align: center;
+}
+
+.error {
+    color: red;
     text-align: center;
 }
 </style>
