@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <h1 class="display-3">News about crypto the last 7 days from <i>{{ this.getLast30Days() }}</i> </h1>
+    <h1 class="display-3">News about crypto the last 30 days from <i>{{ this.getLast30Days() }}</i> </h1>
 
     <div v-if="loading">
       <p>Loading...</p>
