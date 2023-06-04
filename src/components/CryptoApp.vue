@@ -64,6 +64,11 @@
     <div class="crypto-chart-div">
       <canvas id="crypto-chart" width="900" height="450" ref="chart"></canvas>
     </div>
+
+    <Popper :content="`Choose a time period from the dropdown menu to see the historical prices of ${this.currency.charAt(0).toUpperCase() + this.currency.slice(1)}. The line chart will update accordingly to show the price data for the selected duration. 💵 `">
+      <button type="button" class="btn btn-light">Info</button>
+    </Popper>
+
     <CryptoFooter/>
   </div>
 </template>
@@ -75,13 +80,15 @@ import 'chartjs-adapter-moment';
 import CryptoFooter from './CryptoFooter.vue';
 import ErrorComp from './ErrorComp.vue';
 import { Icon } from '@iconify/vue';
+import Popper from "vue3-popper";
 
 export default {
     name: 'CryptoApp',
     components: {
       CryptoFooter,
       ErrorComp,
-      Icon
+      Icon,
+      Popper
     },
     data() {
       return {
@@ -197,8 +204,16 @@ export default {
 .color-picker {
   margin-right: 20px;
 }
-
-
+:root {
+    --popper-theme-background-color: #333333;
+    --popper-theme-background-color-hover: #333333;
+    --popper-theme-text-color: #ffffff;
+    --popper-theme-border-width: 0px;
+    --popper-theme-border-style: solid;
+    --popper-theme-border-radius: 6px;
+    --popper-theme-padding: 32px;
+    --popper-theme-box-shadow: 0 6px 30px -6px rgba(0, 0, 0, 0.25);
+  }
 
 /* För mindre skärmar */
 @media (max-width: 600px) {

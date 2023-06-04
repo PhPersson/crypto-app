@@ -40,7 +40,7 @@ After installing and running CryptoApp, follow these steps to use the applicatio
 * [Coingecko API](https://www.coingecko.com/en/api/documentation)
 * [NewsApi](https://newsapi.org/docs)
 * [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
-
+* [vue3-popper](https://valgeirb.github.io/vue3-popper/)
 
 # Demo
 A live demo of the CryptoApp application can be found at [Crypto Chart](cryptchartapp.netlify.app). Please note that the news articles feature is not functional in the demo due to [API limitations](https://answers.netlify.com/t/getting-error-426-from-newsapi-org/16101)
