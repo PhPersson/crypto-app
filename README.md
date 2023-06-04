@@ -1,44 +1,52 @@
 # CryptoApp
 
-En Vue.js-applikation som hämtar historiska priser för olika kryptovalutor :dollar: :credit_card: från Coingecko API och visar dem på ett linjediagram med hjälp av Chart.js.
+CryptoApp is a Vue.js application that allows users to fetch and display historical prices of various cryptocurrencies using the Coingecko API. :dollar: :credit_card: It also provides news articles related to cryptocurrency. :newspaper: The application utilizes Chart.js to visualize the price data on a line chart.
 
 
 ## Installation
-Klona detta repository.
-* Kör nedan kommando i projektets katalog för att installera nödvändiga paket.
+To install CryptoApp, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Navigate to the project directory in the terminal.
+3. Run the following command to install the required packages:
+
 ```javascript
 npm install
 ``` 
 
-* Kör sedan nedan kommando för att starta servern.
+4. Once the packages are installed, start the server by running the command:
 ```javascript
 npm run serve
 ```
+5. The application will be accessible at http://localhost:8080 in your browser.
 
+Usage
+After installing and running CryptoApp, follow these steps to use the application:
 
-# Användning
-Välj tidsperioden från drop-down menyn.
-Diagrammet uppdateras för att visa historiska priser för Bitcoin för den valda tidsperioden.
+1. Select a time period from the dropdown menu to view the historical prices of Bitcoin for the chosen duration.
+2. The line chart will automatically update to display the price data based on your selection.
+3. Browse the news section to find and read articles related to cryptocurrency.
 
 ## Teknologier som används
 * [Vue.js](https://vuejs.org/)
 * [axios](https://github.com/axios/axios)
 * [Chart.js](https://www.chartjs.org/)
 * [Coingecko API](https://www.coingecko.com/en/api/documentation)
+* [NewsApi](https://newsapi.org/docs)
 * [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 
 # Demo
-Du hittar en live demo av applikationen på [Crypto Chart](cryptchartapp.netlify.app)
+A live demo of the CryptoApp application can be found at [Crypto Chart](cryptchartapp.netlify.app). Please note that the news articles feature is not functional in the demo due to [API limitations](https://answers.netlify.com/t/getting-error-426-from-newsapi-org/16101)
 
+![News page](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDU5M2FkNmU1ODZlN2MyMDlkMjk3ZDFiMDRjNDliNjgxZmM2MzIzZCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/kgnjhTshlmH2ktFTGe/giphy.gif)
 
-
-## Förbättringar
-
-- [ ] ~~Låta användaren söka efter en specifik kryptovaluta~~
-    - Kommer ej att implementeras pga. sättet API:et är uppbyggt. "id" för att söka efter valuta matchar inte alltid namnet på valutan.
-- [X] Gör hela appliaktionen bättre anpassad för mindre skärmar
-- [X] Låta användaren ändra färgen på grafen
-- [X] Visa bättre felmeddelanden än alert
+## Future Improvements
+- [ ] ~~Allow the user to search for a specific cryptocurrency~~
+  - Will not be implemented due to the structure of the API. The "id" used to search for a currency does not always match the currency name.
+- [X] Make the entire application responsive for smaller screens.
+- [X] Allow the user to change the color of the chart
+- [X] Display better error messages than alerts.
 
 ## Licens
-Det här projektet är licensierat under Apache License 2.0. Se  [LICENSE](LICENSE) för mer information.
+This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for more information.
+
