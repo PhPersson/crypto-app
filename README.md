@@ -1,4 +1,6 @@
-# CryptoApp
+# CryptoApp ![Project Status]
+![Project Status](https://img.shields.io/badge/Status-Published-brightgreen)
+
 
 CryptoApp is a Vue.js application that allows users to fetch and display historical prices of various cryptocurrencies using the Coingecko API. :dollar: :credit_card: It also provides news articles related to cryptocurrency. :newspaper: The application utilizes Chart.js to visualize the price data on a line chart.
 
