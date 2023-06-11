@@ -1,4 +1,4 @@
-# CryptoApp ![Project Status]
+# CryptoApp
 ![Project Status](https://img.shields.io/badge/Status-Published-brightgreen)
 
 
