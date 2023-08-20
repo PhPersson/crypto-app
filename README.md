@@ -47,9 +47,6 @@ After installing and running CryptoApp, follow these steps to use the applicatio
 # Demo
 A live demo of the CryptoApp application can be found at [Crypto Chart](https://cryptchartapp.netlify.app/). Please note that the news articles feature is not functional in the demo due to [API limitations](https://answers.netlify.com/t/getting-error-426-from-newsapi-org/16101)
 
-![News page](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDU5M2FkNmU1ODZlN2MyMDlkMjk3ZDFiMDRjNDliNjgxZmM2MzIzZCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/kgnjhTshlmH2ktFTGe/giphy.gif)
-
-
 
 ## Future Improvements
 - [ ] ~~Allow the user to search for a specific cryptocurrency~~
