@@ -44,9 +44,6 @@ After installing and running CryptoApp, follow these steps to use the applicatio
 * [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 * [vue3-popper](https://valgeirb.github.io/vue3-popper/)
 
-# Demo
-A live demo of the CryptoApp application can be found at [Crypto Chart](https://cryptchartapp.netlify.app/). Please note that the news articles feature is not functional in the demo due to [API limitations](https://answers.netlify.com/t/getting-error-426-from-newsapi-org/16101)
-
 
 ## Future Improvements
 - [ ] ~~Allow the user to search for a specific cryptocurrency~~
