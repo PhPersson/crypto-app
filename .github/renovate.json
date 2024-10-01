@@ -1,18 +1,30 @@
-{ "enabled": false }
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base", ":dependencyDashboard"
+    "config:base", 
+    ":dependencyDashboard"
   ],
   "prHourlyLimit": 3,
   "packageRules": [
     {
       "matchUpdateTypes": ["major"],
-      "dependencyDashboardApproval": true
+      "dependencyDashboardApproval": true,
+      "groupName": "major updates"
     },
     {
       "matchUpdateTypes": ["minor", "patch"],
       "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "groupName": "minor and patch updates"
+    },
+    {
+      "matchPackageNames": ["vue", "vue-router", "vuex"],
+      "groupName": "vue ecosystem",
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "dev dependencies",
       "automerge": true
     }
   ]
